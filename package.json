@@ -1,0 +1,29 @@
+{
+  "name": "vomitorium",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Traverse project structure and write file contents to a single output file",
+  "main": "vomitorium.js",
+  "bin": {
+    "vomitorium": "./vomitorium.js"
+  },
+  "scripts": {
+    "start": "node vomitorium.js"
+  },
+  "keywords": [
+    "traverse",
+    "project",
+    "output",
+    "llm",
+    "chatGpt",
+    "claude",
+    "code",
+    "review"
+  ],
+  "author": "justin wolcott",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "cosmiconfig": "^9.0.0"
+  }
+}

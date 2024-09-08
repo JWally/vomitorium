@@ -1,0 +1,17 @@
+#/.gitignore
+!jest.config.js
+*.d.ts
+node_modules
+.DS_Store
+coverage
+/bin/*.js
+/lib/*.js
+/lib/*/*.js
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+bom.xml
+.vscode
+.idea
+package-lock.json
