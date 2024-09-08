@@ -1,4 +1,5 @@
-# Vomitorium
+![image](https://github.com/user-attachments/assets/cf6a4b0f-6fb8-4c63-9a7a-c16827c9ed47)
+
 
 Vomitorium is a command-line tool designed to easily load an entire project into a single text file. It recursively scans directories, processes files, and compiles their contents into a single output file. Useful for working with LLMs.
 
