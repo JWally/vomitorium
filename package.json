@@ -8,7 +8,8 @@
     "vomitorium": "./vomitorium.js"
   },
   "scripts": {
-    "start": "node vomitorium.js"
+    "start": "node vomitorium.js",
+    "test": "echo make-tests"
   },
   "keywords": [
     "traverse",
