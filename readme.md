@@ -44,9 +44,29 @@ vomitorium --output my-custom-output.txt
 
 ## Configuration
 
-Vomitorium uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. You can create a configuration file named `.vomitoriumrc`, `.vomitoriumrc.json`, `.vomitoriumrc.yaml`, `vomitorium.config.js`, or add a `"vomitorium"` key to your `package.json` file.
+1. JSON config File (Recommended)
 
-Default configuration:
+By default, Vomitorium looks for a file named `sick.json` in your project root. If it finds one, it merges its settings with the internal defaults. You can also specify a custom file path with `--config <path>`.
+
+Here’s an example `sick.json`:
+
+```json
+{
+  "scan": ".",
+  "include": ["bin", "lib", "src", "test"],
+  "exclude": ["node_modules", ".git", "dist", "build"],
+  "excludeFiles": ["package.json", "package-lock.json"],
+  "extensions": [".js", ".ts", ".json"],
+  "showExcluded": true,
+  "showSkipped": true,
+  "outputFile": "output.sick"
+}
+```
+
+2. Cosmiconfig Support (Fallback)
+If no JSON file is found at the path you specify (or at sick.json by default), Vomitorium uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. You can create a configuration file named `.vomitoriumrc`, `.vomitoriumrc.json`, `.vomitoriumrc.yaml`, `vomitorium.config.js`, or add a `"vomitorium"` key to your `package.json` file.
+
+If none of these are found, it falls back on its default configuration:
 
 ```json
 {
